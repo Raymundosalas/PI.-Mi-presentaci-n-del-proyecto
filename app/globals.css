@@ -1,0 +1,413 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f3f6fb;
+  color: #1e293b;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #101b2e;
+  color: white;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 800;
+  padding: 5px 10px 35px;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  background: #1765dc;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.menu-title {
+  color: #8593aa;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin: 0 10px 15px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 5px;
+  border-radius: 9px;
+  color: #c3ccda;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: #1d2b42;
+  color: white;
+}
+
+.menu-item.active {
+  background: #1765dc;
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-top: 1px solid #28364c;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2874e8;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.user strong {
+  display: block;
+  font-size: 13px;
+}
+
+.user small {
+  display: block;
+  color: #9baac0;
+  margin-top: 4px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid #e5eaf1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  font-size: 14px;
+}
+
+.online {
+  color: #16a36a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.content {
+  padding: 35px;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: 800;
+  color: #142239;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #8491a4;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.stat {
+  padding: 25px;
+  border-radius: 13px;
+  color: white;
+  min-height: 130px;
+}
+
+.stat h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.stat p {
+  font-size: 14px;
+}
+
+.blue {
+  background: linear-gradient(135deg, #1765dc, #4287f5);
+}
+
+.green {
+  background: linear-gradient(135deg, #12a879, #32c48f);
+}
+
+.purple {
+  background: linear-gradient(135deg, #7653d8, #9678ef);
+}
+
+.orange {
+  background: linear-gradient(135deg, #f29b26, #ffbc51);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #e7ecf3;
+}
+
+.panel h2 {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf1f6;
+  font-size: 13px;
+}
+
+.list-item span:last-child {
+  color: #8591a4;
+  font-size: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.team-card {
+  background: white;
+  border: 1px solid #e7ecf3;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+}
+
+.team-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.team-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  color: #8390a3;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: white;
+  padding: 20px;
+  border-radius: 13px;
+  border: 1px solid #e7ecf3;
+  margin-bottom: 25px;
+}
+
+input, select {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  color: #243247;
+}
+
+input:focus, select:focus {
+  border-color: #1765dc;
+  box-shadow: 0 0 0 3px rgba(23, 101, 220, 0.1);
+}
+
+.form button {
+  background: #1765dc;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.form button:hover {
+  background: #0d4eb4;
+}
+
+.delete {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.delete:hover {
+  background: #fecaca;
+}
+
+.table-container {
+  background: white;
+  border: 1px solid #e7ecf3;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th {
+  background: #f8fafc;
+  color: #68768b;
+  text-align: left;
+  padding: 15px;
+  font-size: 12px;
+}
+
+td {
+  padding: 15px;
+  border-top: 1px solid #edf1f6;
+  font-size: 13px;
+}
+
+.status {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    width: 75px;
+    padding: 15px 8px;
+  }
+
+  .logo {
+    justify-content: center;
+    padding: 5px 0 25px;
+  }
+
+  .logo span, .menu-title, .sidebar-bottom,
+  .menu-item:not(.active) {
+    display: none;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding: 15px 5px;
+    font-size: 0;
+  }
+
+  .menu-item span {
+    font-size: 18px;
+  }
+
+  .content {
+    padding: 20px 15px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+}
